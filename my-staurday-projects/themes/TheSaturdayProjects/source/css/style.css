@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117; /* Dark blue theme */
+    color: #c9d1d9; /* Light text */
+}
+
+.main-container {
+    flex: 1; /* Pushes the footer down */
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161b22;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif; /* Montserrat font applied */
+    font-weight: 200; /* ExtraLight version */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+/* Navigation Styling */
+nav {
+    font-size: 1.2rem; /* Size of the nav links */
+    display: flex;
+    gap: 2rem; /* Spacing between nav links */
+    align-items: center;
+}
+
+/* Navigation links styling */
+a {
+    text-decoration: none;
+    color: #c9d1d9;
+    font-weight: 200; /* ExtraLight version */
+    padding: 0.25rem 0; /* Minimal padding for alignment */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for nav links */
+a:hover {
+    color: #58a6ff;
+    border-bottom: 2px solid #58a6ff; /* Underline on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #161b22;
+    color: #c9d1d9;
+    position: relative;
+}
+
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #161b22;
+}
+
+.hero h2 {
+    color: #dbebfb;
+    text-align: center;
+    font-weight: 200; /* ExtraLight version */
+}
+
+.button-coffee {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #238636;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;    /* Title-Effects Class for TheSaturdayProjects */
+    .Title-Effects {
+        font-family: 'Montserrat', sans-serif; /* Montserrat font */
+        font-weight: 200; /* ExtraLight version */
+        font-size: 1.8rem; /* Adjust title size */
+        color: #dbebfb;
+        margin: 0;
+        text-align: left; /* Align to the left for visual consistency */
+    }
+    
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+        .Title-Effects {
+            text-align: center; /* Center align on mobile */
+        }
+    }
+    font-size: 1rem;
+}
+
+.button-coffee:hover {
+    background-color: #2ea043;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* Title-Effects Class for TheSaturdayProjects */
+.Title-Effects {
+    font-family: 'Montserrat', sans-serif; /* Montserrat font */
+    font-weight: 200; /* ExtraLight version */
+    font-size: 1.8rem; /* Adjust title size */
+    color: #dbebfb;
+    margin: 0;
+    text-align: left; /* Align to the left for visual consistency */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .Title-Effects {
+        text-align: center; /* Center align on mobile */
+    }
+}
+
+@keyframes changeEmoji {
+    0% {
+        content: '⚙️';  /* Gear (represents development and settings) */
+    }
+    16% {
+        content: '🔧';  /* Wrench (represents debugging or fixing issues) */
+    }
+    32% {
+        content: '🛠️';  /* Hammer and wrench (represents building or constructing code) */
+    }
+    48% {
+        content: '💡';  /* Lightbulb (represents ideas or innovation) */
+    }
+    64% {
+        content: '🖥️';  /* Desktop computer (represents coding or software development) */
+    }
+    80% {
+        content: '💻';  /* Laptop (represents working on a laptop, development) */
+    }
+    100% {
+        content: '⚙️';  /* Back to gear */
+    }
+}
+
+#emoji {
+    display: inline-block; /* Makes it behave like an inline element */
+    position: relative;
+}
+
+#emoji::after {
+    content: '⚙️'; /* Initial emoji */
+    animation: changeEmoji 3s infinite; /* Change emoji every 3 seconds */
+}

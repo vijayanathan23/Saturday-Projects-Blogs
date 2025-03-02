@@ -1,0 +1,16 @@
+<div class="hero">
+    <h2 class="Title-Effects">TheSaturdayProjects</h2>
+    <p>A place for my personal Experiments, Projects, Thoughts, and Ideas.</p>
+    <p><i>An attempt to Engineer <span id="emoji"></span> more..!</i></p>
+</div>
+<div class="blog-preview">
+    <h3>Posts</h3>
+    <ul>
+        <% site.posts.each(function(post){ %>
+        <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+            <p><%= post.excerpt %></p>
+        </li>
+        <% }) %>
+    </ul>
+</div>
