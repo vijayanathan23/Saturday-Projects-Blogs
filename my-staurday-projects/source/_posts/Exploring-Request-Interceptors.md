@@ -3,23 +3,31 @@ title: Exploring Request Interceptors
 tags: [Interceptors, Cybersecurity, Golang, HTTP, Proxy]
 categories: [Tech, Projects]
 ---
-Quickly to see through what are Interceptors - to monitor and understand how two or more computers interact, cyber security professionals intercept the network communication.  
-This happens mainly at **application** and **network layers**.
+# Understanding Interceptors  
 
-## Application Layer Interception
-At the **Application layer**, it is mainly used to test/understand **HTTP/HTTPS** protocols or even **socket communication**.  
-There are many tools to do this, including **Burp Suite** and **ZAP**, which are the most popular ones.
+Interceptors are essential tools for monitoring and analyzing network communication, allowing cybersecurity professionals to observe how two or more computers interact. By capturing and inspecting network traffic, interceptors help in debugging, security testing, and performance analysis.  
+
+Interception primarily happens at two key levels: **Application Layer** and **Network Layer**.  
+
+## Application Layer Interception 
+At the **Application Layer**, interception is commonly used to analyze and test **HTTP/HTTPS** protocols and **socket communication**. This helps in debugging APIs, security testing, and understanding request/response flows.  
+
+Popular tools for application-layer interception include:  
+- **Burp Suite** – A powerful tool for web security testing.  
+- **ZAP (Zed Attack Proxy)** – An open-source security scanner, widely used for penetration testing.  
+- **MITMproxy** – A tool specifically designed for intercepting, modifying, and analyzing HTTP/HTTPS traffic.
 
 ## Network Layer Interception
-At the **Network layer**, the most well-known tool is **Wireshark**, a packet sniffer that captures and analyzes network traffic.  
-However, other tools such as **tcpdump** (a command-line network packet analyzer) and **MITMproxy** (a tool for intercepting and modifying HTTP/HTTPS traffic) can also be used.  
-If you're focusing on **web traffic interception**, **MITMproxy** could be worth exploring.
+At the **Network Layer**, interception is focused on capturing and analyzing raw network traffic at a lower level. This helps in identifying vulnerabilities, tracking network behavior, and diagnosing issues.  
+Key tools for network-layer interception include:  
+- **Wireshark** – A widely used packet sniffer for deep network traffic analysis.  
+- **tcpdump** – A command-line network packet analyzer for capturing and inspecting traffic in real time.
 
 ---
 
 ## This Saturday's Exploration
 Now, as this Saturday's exploration plan is to understand how **Web Application Interception** works and maybe build a small one?  
-(Well, we have a lot of **LLMs 🤖** for help… just for help!)
+(Well, we have a lot of **LLMs 🤖** for help… [just for help XD])
 
 Having used **Burp Suite** (a tool used for request interception) a few years back, I am familiar with the **Proxy server concept**.
 
@@ -167,7 +175,8 @@ To read more about it: [Firefox Captive Portal](https://support.mozilla.org/en-U
 3. The **server sends a response** → the **proxy stores it and forwards it back** to the client.
 
 Pretty simple! Well… it **seemed simple**, but it certainly took some time to understand **Golang** and its libraries.  
-There were hiccups—like **not realizing the server was encoding responses in Gzip** and spending **half a day** figuring out what encoding was happening! 🤦‍♂️
+There were hiccups—like **not realizing the server was encoding responses in Gzip**. I **spent half a day** just figuring out what kind of encoding the server was using when sending responses to the client. 🤦‍♂️
+
 
 ---
 

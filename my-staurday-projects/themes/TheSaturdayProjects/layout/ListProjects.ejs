@@ -1,0 +1,9 @@
+<h2>Projects:</h2>
+<ul>
+  <% for (var post of site.posts.toArray()) { %>
+    <li>
+      <h4><a href="<%= url_for(post.path) %>"><%= post.title %></a> - <%= post.date.format('YYYY-MM-DD') %></h4>
+      <p><%= post.excerpt %></p>
+    </li>
+  <% } %>
+</ul>

@@ -36,20 +36,49 @@ nav {
     align-items: center;
 }
 
+h1 {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Ensure nav stays within h1 width */
+h1 + nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Adjust spacing between links */
+    margin-top: 5px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 /* Navigation links styling */
 a {
-    text-decoration: none;
-    color: #c9d1d9;
-    font-weight: 200; /* ExtraLight version */
-    padding: 0.25rem 0; /* Minimal padding for alignment */
+    color: #58a6ff; /* Light blue */
+    text-decoration: none; /* Remove underline */
+    font-style: italic; /* Italicized */
     transition: color 0.3s ease-in-out;
 }
 
-/* Hover effect for nav links */
-a:hover {
-    color: #58a6ff;
-    border-bottom: 2px solid #58a6ff; /* Underline on hover */
+h1 a, nav a {
+    font-family: 'Montserrat', sans-serif; /* Montserrat font */
+    font-weight: 200; /* ExtraLight version */
+    color: #dbebfb;
+    margin: 0;
+    font-style: normal; /* No italics */
+    text-decoration: none; /* Remove underline */
 }
+
+/* Hover effect for links */
+a:hover {
+    border-bottom: 2px solid #58a6ff; /* Underline effect */
+}
+
+h1 a:hover, h1 nav a:hover {
+    border-bottom: 2px solid #58a6ff; /* Underline effect */
+}
+
 
 footer {
     text-align: center;

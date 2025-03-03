@@ -4,3 +4,116 @@
         <%- page.content %>
     </div>
 </article>
+
+<style>
+    /* Ensure body does not add any extra margins */
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* Make main-container take full width */
+    .main-container {
+        width: 100vw; /* Full width */
+        padding: 16px;
+        box-sizing: border-box; /* Prevent content overflow */
+    }
+
+    /* Ensure images are responsive */
+    .post-content img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* Enhance readability */
+    .post-content {
+        font-size: 1rem;
+        line-height: 1.8;
+        word-wrap: break-word;
+        padding: 10px;
+    }
+
+    /* Code blocks styling */
+    pre, code {
+        background: #0d1117; /* GitHub dark mode style */
+        color: #c9d1d9; /* Light gray text */
+        font-family: "Fira Code", "Courier New", monospace;
+        font-size: 1rem;
+        padding: 12px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+
+    /* Inline code styling */
+    code {
+        background: #161b22; /* Darker gray */
+        padding: 3px 6px;
+        border-radius: 4px;
+    }
+
+    pre {
+        white-space: pre;
+        overflow-x: auto;
+        max-width: 100%;
+        border: 1px solid #30363d; /* Light border for separation */
+    }
+
+    /* Improve readability of line numbers in highlighted code */
+    .highlight table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .highlight td {
+        padding: 6px;
+        border-right: 1px solid #30363d;
+    }
+
+    /* Ensure tables are responsive */
+    table {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        /* Full-screen header only for mobile */
+        .header-container {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #161b22; /* Dark background */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Adjust title inside header on mobile */
+        .header-container h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #dbebfb;
+            margin: 0;
+            text-align: center;
+        }
+
+        .main-container {
+            padding: 12px;
+        }
+
+        .post-content {
+            font-size: 0.95rem;
+            padding: 8px;
+        }
+
+        pre, code {
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+    }
+</style>
